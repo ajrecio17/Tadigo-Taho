@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tadigo Taho - Premium Taho Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-amber-50">
+    <!-- Navigation -->
+    <nav class="gradient-brown fixed w-full top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-leaf text-green-300 text-2xl"></i>
+                    <span class="text-white font-bold text-xl hidden sm:inline">Tadigo Taho</span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-white hover:text-amber-200 transition">Home</a>
+                    <a href="#menu" class="text-white hover:text-amber-200 transition">Menu</a>
+                    <a href="#locations" class="text-white hover:text-amber-200 transition">Locations</a>
+                    <a href="#about" class="text-white hover:text-amber-200 transition">About</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-white text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <a href="#home" class="block text-white py-2 hover:text-amber-200">Home</a>
+                <a href="#menu" class="block text-white py-2 hover:text-amber-200">Menu</a>
+                <a href="#locations" class="block text-white py-2 hover:text-amber-200">Locations</a>
+                <a href="#about" class="block text-white py-2 hover:text-amber-200">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section text-white pt-32 pb-20 sm:pt-40 sm:pb-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="fade-in">
+                    <h1 class="text-5xl sm:text-6xl font-bold mb-4">Tadigo Taho</h1>
+                    <p class="text-xl sm:text-2xl mb-6 text-amber-100">Experience the authentic taste of traditional taho with a modern twist</p>
+                    <p class="text-lg mb-8 text-amber-50">Fresh, delicious, and crafted with love. Visit us at our locations today!</p>
+                    <a href="#locations" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-lg transition transform hover:scale-105">
+                        <i class="fas fa-map-marker-alt mr-2"></i>Find Us
+                    </a>
+                </div>
+                <div class="fade-in hidden md:block">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-amber-200 to-green-300 rounded-2xl transform rotate-6"></div>
+                        <div class="relative bg-white rounded-2xl p-8 shadow-2xl">
+                            <p class="text-gray-800 text-center font-bold text-4xl">🥤</p>
+                            <p class="text-center text-gray-700 font-bold mt-4">Fresh Taho Daily</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-16 sm:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl sm:text-5xl font-bold text-center mb-4 text-gray-800">Our Menu</h2>
+            <p class="text-center text-gray-600 mb-12">Choose from our delicious selection of taho flavors and treats</p>
+
+            <!-- Menu Filter -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <button class="menu-filter-btn active border-2 border-gray-800 text-gray-800 font-bold py-2 px-6 rounded-full" data-filter="all">
+                    All
+                </button>
+                <button class="menu-filter-btn border-2 border-gray-800 text-gray-800 font-bold py-2 px-6 rounded-full" data-filter="taho">
+                    Taho
+                </button>
+                <button class="menu-filter-btn border-2 border-gray-800 text-gray-800 font-bold py-2 px-6 rounded-full" data-filter="snacks">
+                    Snacks
+                </button>
+                <button class="menu-filter-btn border-2 border-gray-800 text-gray-800 font-bold py-2 px-6 rounded-full" data-filter="ice-cream">
+                    Ice Cream
+                </button>
+            </div>
+
+            <!-- Menu Items Grid -->
+            <div id="menuGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- TAHO Items -->
+                <div class="menu-item menu-card bg-gradient-to-br from-amber-50 to-green-50 rounded-xl p-6 border-2 border-amber-100" data-category="taho">
+                    <div class="bg-gradient-brown rounded-lg p-8 text-white text-center mb-4 h-32 flex items-center justify-center">
+                        <span class="text-5xl">🥤</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Classic Taho</h3>
+                    <p class="text-gray-600 mb-4 text-sm">Traditional flavor</p>
+                    <div class="flex justify-between text-sm font-bold text-gray-700">
+                        <span>S: ₱19 | M: ₱29 | L: ₱39</span>
+                    </div>
+                </div>
+
+                <div class="menu-item menu-card bg-gradient-to-br from-amber-50 to-green-50 rounded-xl p-6 border-2 border-amber-100" data-category="taho">
+                    <div class="bg-gradient-brown rounded-lg p-8 text-white text-center mb-4 h-32 flex items-center justify-center">
+                        <span class="text-5xl">🍫</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Chocolate Taho</h3>
+                    <p class="text-gray-600 mb-4 text-sm">Rich chocolate flavor</p>
+                    <div class="flex justify-between text-sm font-bold text-gray-700">
+                        <span>S: ₱35 | M: ₱45 | L: ₱55</span>
+                    </div>
+                </div>
+
+                <div class="menu-item menu-card bg-gradient-to-br from-amber-50 to-green-50 rounded-xl p-6 border-2 border-amber-100" data-category="taho">
+                    <div class="bg-gradient-brown rounded-lg p-8 text-white text-center mb-4 h-32 flex items-center justify-center">
+                        <span class="text-5xl">🍯</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Salted Caramel Taho</h3>
+                    <p class="text-gray-600 mb-4 text-sm">Sweet and salty blend</p>
+                    <div class="flex justify-between text-sm font-bold text-gray-700">
+                        <span>S: ₱35 | M: ₱45 | L: ₱55</span>
+                    </div>
+                </div>
+
+                <div class="menu-item menu-card bg-gradient-to-br from-amber-50 to-green-50 rounded-xl p-6 border-2 border-amber-100" data-category="taho">
+                    <div class="bg-gradient-brown rounded-lg p-8 text-white text-center mb-4 h-32 flex items-center justify-center">
+                        <span class="text-5xl">🎋</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Pandan Taho</h3>
+                    <p class="text-gray-600 mb-4 text-sm">Aromatic pandan flavor</p>
+                    <div class="flex justify-between text-sm font-bold text-gray-700">
+                        <span>S: ₱39 | M: ₱49 | L: ₱59</span>
+                    </div>
+                </div>
+
+                <div class="menu-item menu-card bg-gradient-to-br from-amber-50 to-green-50 rounded-xl p-6 border-2 border-amber-100" data-category="taho">
+                    <div class="bg-gradient-brown rounded-lg p-8 text-white text-center mb-4 h-32 flex items-center justify-center">
+                        <span class="text-5xl">🍵</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Ube Taho</h3>
+                    <p class="text-gray-600 mb-4 text-sm">Purple yam flavor</p>
+                    <div class="flex justify-between text-sm font-bold text-gray-700">
+                        <span>S: ₱39 | M: ₱49 | L: ₱59</span>
+                    </div>
+                </div>
+
+                <div class="menu-item menu-card bg-gradient-to-br from-amber-50 to-green-50 rounded-xl p-6 border-2 border-amber-100" data-category="taho">
+                    <div class="bg-gradient-brown rounded-lg p-8 text-white text-center mb-4 h-32 flex items-center justify-center">
+                        <span class="text-5xl">🍃</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Matcha Taho</h3>
+                    <p class="text-gray-600 mb-4 text-sm">Green tea flavor</p>
+                    <div class="flex justify-between text-sm font-bold text-gray-700">
+                        <span>S: ₱39 | M: ₱49 | L: ₱59</span>
+                    </div>
+                </div>
+
+                <!-- SNACKS Items -->
+                <div class="menu-item menu-card bg-gradient-to-br from-amber-50 to-green-50 rounded-xl p-6 border-2 border-amber-100" data-category="snacks">
+                    <div class="bg-gradient-brown rounded-lg p-8 text-white text-center mb-4 h-32 flex items-center justify-center">
+                        <span class="text-5xl">🍤</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Kikiam, Squid Ball & Mix</h3>
+                    <p class="text-gray-600 mb-4 text-sm">Crispy savory combo</p>
+                    <div class="text-sm font-bold text-gray-700">₱30</div>
+                </div>
+
+                <div class="menu-item menu-card bg-gradient-to-br from-amber-50 to-green-50 rounded-xl p-6 border-2 border-amber-100" data-category="snacks">
+                    <div class="bg-gradient-brown rounded-lg p-8 text-white text-center mb-4 h-32 flex items-center justify-center">
+                        <span class="text-5xl">🟫</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Tofu Squares</h3>
+                    <p class="text-gray-600 mb-4 text-sm">Crispy golden tofu</p>
+                    <div class="text-sm font-bold text-gray-700">₱30</div>
+                </div>
+
+                <div class="menu-item menu-card bg-gradient-to-br from-amber-50 to-green-50 rounded-xl p-6 border-2 border-amber-100" data-category="snacks">
+                    <div class="bg-gradient-brown rounded-lg p-8 text-white text-center mb-4 h-32 flex items-center justify-center">
+                        <span class="text-5xl">🌭</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Hotdog</h3>
+                    <p class="text-gray-600 mb-4 text-sm">₱20 | Cheesedog ₱25</p>
+                    <div class="text-sm font-bold text-gray-700">Savory favorites</div>
+                </div>
+
+                <div class="menu-item menu-card bg-gradient-to-br from-amber-50 to-green-50 rounded-xl p-6 border-2 border-amber-100" data-category="snacks">
+                    <div class="bg-gradient-brown rounded-lg p-8 text-white text-center mb-4 h-32 flex items-center justify-center">
+                        <span class="text-5xl">🍟</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Fries</h3>
+                    <p class="text-gray-600 mb-4 text-sm">Golden and crispy</p>
+                    <div class="text-sm font-bold text-gray-700">₱30</div>
+                </div>
+
+                <div class="menu-item menu-card bg-gradient-to-br from-amber-50 to-green-50 rounded-xl p-6 border-2 border-amber-100" data-category="snacks">
+                    <div class="bg-gradient-brown rounded-lg p-8 text-white text-center mb-4 h-32 flex items-center justify-center">
+                        <span class="text-5xl">🍗</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Nuggets & Fries</h3>
+                    <p class="text-gray-600 mb-4 text-sm">Perfect combo meal</p>
+                    <div class="text-sm font-bold text-gray-700">₱40</div>
+                </div>
+
+                <div class="menu-item menu-card bg-gradient-to-br from-amber-50 to-green-50 rounded-xl p-6 border-2 border-amber-100" data-category="snacks">
+                    <div class="bg-gradient-brown rounded-lg p-8 text-white text-center mb-4 h-32 flex items-center justify-center">
+                        <span class="text-5xl">🌮</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Hotdog Sandwich</h3>
+                    <p class="text-gray-600 mb-4 text-sm">Loaded with toppings</p>
+                    <div class="text-sm font-bold text-gray-700">₱35</div>
+                </div>
+
+                <div class="menu-item menu-card bg-gradient-to-br from-amber-50 to-green-50 rounded-xl p-6 border-2 border-amber-100" data-category="snacks">
+                    <div class="bg-gradient-brown rounded-lg p-8 text-white text-center mb-4 h-32 flex items-center justify-center">
+                        <span class="text-5xl">🥚</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Egg Sandwich</h3>
+                    <p class="text-gray-600 mb-4 text-sm">Fresh and filling</p>
+                    <div class="text-sm font-bold text-gray-700">₱30</div>
+                </div>
+
+                <div class="menu-item menu-card bg-gradient-to-br from-amber-50 to-green-50 rounded-xl p-6 border-2 border-amber-100" data-category="snacks">
+                    <div class="bg-gradient-brown rounded-lg p-8 text-white text-center mb-4 h-32 flex items-center justify-center">
+                        <span class="text-5xl">🍔</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Burger</h3>
+                    <p class="text-gray-600 mb-4 text-sm">Juicy beef patty</p>
+                    <div class="text-sm font-bold text-gray-700">₱35</div>
+                </div>
+
+                <div class="menu-item menu-card bg-gradient-to-br from-amber-50 to-green-50 rounded-xl p-6 border-2 border-amber-100" data-category="snacks">
+                    <div class="bg-gradient-brown rounded-lg p-8 text-white text-center mb-4 h-32 flex items-center justify-center">
+                        <span class="text-5xl">🍳</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Burger & Egg</h3>
+                    <p class="text-gray-600 mb-4 text-sm">Best of both worlds</p>
+                    <div class="text-sm font-bold text-gray-700">₱45</div>
+                </div>
+
+                <div class="menu-item menu-card bg-gradient-to-br from-amber-50 to-green-50 rounded-xl p-6 border-2 border-amber-100" data-category="snacks">
+                    <div class="bg-gradient-brown rounded-lg p-8 text-white text-center mb-4 h-32 flex items-center justify-center">
+                        <span class="text-5xl">⭐</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Overload Sandwich</h3>
+                    <p class="text-gray-600 mb-4 text-sm">Our signature special</p>
+                    <div class="text-sm font-bold text-gray-700">₱60</div>
+                </div>
+
+                <!-- ICE CREAM Items -->
+                <div class="menu-item menu-card bg-gradient-to-br from-amber-50 to-green-50 rounded-xl p-6 border-2 border-amber-100" data-category="ice-cream">
+                    <div class="bg-gradient-brown rounded-lg p-8 text-white text-center mb-4 h-32 flex items-center justify-center">
+                        <span class="text-5xl">🍦</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Ice Cream Cone</h3>
+                    <p class="text-gray-600 mb-4 text-sm">Classic cone</p>
+                    <div class="text-sm font-bold text-gray-700">₱10 | ₱15 | ₱20</div>
+                </div>
+
+                <div class="menu-item menu-card bg-gradient-to-br from-amber-50 to-green-50 rounded-xl p-6 border-2 border-amber-100" data-category="ice-cream">
+                    <div class="bg-gradient-brown rounded-lg p-8 text-white text-center mb-4 h-32 flex items-center justify-center">
+                        <span class="text-5xl">🍨</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Cup Ice Cream</h3>
+                    <p class="text-gray-600 mb-4 text-sm">In a cup</p>
+                    <div class="text-sm font-bold text-gray-700">6oz-16oz</div>
+                </div>
+
+                <div class="menu-item menu-card bg-gradient-to-br from-amber-50 to-green-50 rounded-xl p-6 border-2 border-amber-100" data-category="ice-cream">
+                    <div class="bg-gradient-brown rounded-lg p-8 text-white text-center mb-4 h-32 flex items-center justify-center">
+                        <span class="text-5xl">🍫</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Choco Sundae</h3>
+                    <p class="text-gray-600 mb-4 text-sm">Rich chocolate</p>
+                    <div class="text-sm font-bold text-gray-700">6oz: ₱28 - 16oz: ₱70</div>
+                </div>
+
+                <div class="menu-item menu-card bg-gradient-to-br from-amber-50 to-green-50 rounded-xl p-6 border-2 border-amber-100" data-category="ice-cream">
+                    <div class="bg-gradient-brown rounded-lg p-8 text-white text-center mb-4 h-32 flex items-center justify-center">
+                        <span class="text-5xl">🍯</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Caramel Sundae</h3>
+                    <p class="text-gray-600 mb-4 text-sm">Sweet caramel</p>
+                    <div class="text-sm font-bold text-gray-700">6oz: ₱28 - 16oz: ₱70</div>
+                </div>
+
+                <div class="menu-item menu-card bg-gradient-to-br from-amber-50 to-green-50 rounded-xl p-6 border-2 border-amber-100" data-category="ice-cream">
+                    <div class="bg-gradient-brown rounded-lg p-8 text-white text-center mb-4 h-32 flex items-center justify-center">
+                        <span class="text-5xl">🍵</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Ube Sundae</h3>
+                    <p class="text-gray-600 mb-4 text-sm">Purple yam delight</p>
+                    <div class="text-sm font-bold text-gray-700">6oz: ₱28 - 16oz: ₱70</div>
+                </div>
+
+                <div class="menu-item menu-card bg-gradient-to-br from-amber-50 to-green-50 rounded-xl p-6 border-2 border-amber-100" data-category="ice-cream">
+                    <div class="bg-gradient-brown rounded-lg p-8 text-white text-center mb-4 h-32 flex items-center justify-center">
+                        <span class="text-5xl">🎋</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Pandan Sundae</h3>
+                    <p class="text-gray-600 mb-4 text-sm">Aromatic pandan</p>
+                    <div class="text-sm font-bold text-gray-700">6oz: ₱28 - 16oz: ₱70</div>
+                </div>
+
+                <div class="menu-item menu-card bg-gradient-to-br from-amber-50 to-green-50 rounded-xl p-6 border-2 border-amber-100" data-category="ice-cream">
+                    <div class="bg-gradient-brown rounded-lg p-8 text-white text-center mb-4 h-32 flex items-center justify-center">
+                        <span class="text-5xl">⭐</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Rocky Road</h3>
+                    <p class="text-gray-600 mb-4 text-sm">Chocolate with mix</p>
+                    <div class="text-sm font-bold text-gray-700">6oz: ₱38 - 16oz: ₱80</div>
+                </div>
+
+                <div class="menu-item menu-card bg-gradient-to-br from-amber-50 to-green-50 rounded-xl p-6 border-2 border-amber-100" data-category="ice-cream">
+                    <div class="bg-gradient-brown rounded-lg p-8 text-white text-center mb-4 h-32 flex items-center justify-center">
+                        <span class="text-5xl">🍪</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Oreo Overload</h3>
+                    <p class="text-gray-600 mb-4 text-sm">Oreo lovers delight</p>
+                    <div class="text-sm font-bold text-gray-700">6oz: ₱38 - 16oz: ₱80</div>
+                </div>
+
+                <div class="menu-item menu-card bg-gradient-to-br from-amber-50 to-green-50 rounded-xl p-6 border-2 border-amber-100" data-category="ice-cream">
+                    <div class="bg-gradient-brown rounded-lg p-8 text-white text-center mb-4 h-32 flex items-center justify-center">
+                        <span class="text-5xl">🟫</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Kitkat</h3>
+                    <p class="text-gray-600 mb-4 text-sm">Kitkat chocolate</p>
+                    <div class="text-sm font-bold text-gray-700">6oz: ₱38 - 16oz: ₱80</div>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center text-sm text-gray-600 bg-amber-100 rounded-lg p-4">
+                <i class="fas fa-cheese mr-2"></i> Add grated cheese - ₱5 | Add ice cream to any taho - ₱10
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations Section -->
+    <section id="locations" class="py-16 sm:py-20 gradient-green text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl sm:text-5xl font-bold text-center mb-4">Visit Us</h2>
+            <p class="text-center text-green-100 mb-12">Find Tadigo Taho near you</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Location 1 -->
+                <div class="location-card bg-white bg-opacity-10 backdrop-blur rounded-2xl p-8 border-2 border-green-300">
+                    <div class="flex items-start mb-6">
+                        <i class="fas fa-map-marker-alt text-4xl text-yellow-300 mr-4"></i>
+                        <div>
+                            <h3 class="text-2xl sm:text-3xl font-bold">Sambat Bubukal</h3>
+                            <p class="text-green-100 text-sm mt-1">📍 Location 1</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-home text-yellow-300 mr-3 mt-1"></i>
+                            <div>
+                                <p class="font-semibold">Address</p>
+                                <p class="text-green-100 text-sm">Beside IFI San Vicente Church & Juliana's Market</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-yellow-300 mr-3 mt-1"></i>
+                            <div>
+                                <p class="font-semibold">Hours</p>
+                                <p class="text-green-100 text-sm">Monday to Friday</p>
+                                <p class="text-green-100 text-sm font-bold">2:00 PM - 8:00 PM</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <i class="fas fa-phone text-yellow-300 mr-3 mt-1"></i>
+                            <div>
+                                <p class="font-semibold">Contact</p>
+                                <p class="text-green-100 text-sm">Coming soon...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="w-full mt-6 bg-yellow-400 hover:bg-yellow-300 text-gray-800 font-bold py-2 px-4 rounded-lg transition">
+                        <i class="fas fa-directions mr-2"></i>Get Directions
+                    </button>
+                </div>
+
+                <!-- Location 2 -->
+                <div class="location-card bg-white bg-opacity-10 backdrop-blur rounded-2xl p-8 border-2 border-green-300">
+                    <div class="flex items-start mb-6">
+                        <i class="fas fa-map-marker-alt text-4xl text-yellow-300 mr-4"></i>
+                        <div>
+                            <h3 class="text-2xl sm:text-3xl font-bold">Bagumbayan</h3>
+                            <p class="text-green-100 text-sm mt-1">📍 Location 2</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-home text-yellow-300 mr-3 mt-1"></i>
+                            <div>
+                                <p class="font-semibold">Address</p>
+                                <p class="text-green-100 text-sm">Near Bagumbayan Basketball Court & GMK Shop</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-yellow-300 mr-3 mt-1"></i>
+                            <div>
+                                <p class="font-semibold">Hours</p>
+                                <p class="text-green-100 text-sm">Tuesday to Sunday</p>
+                                <p class="text-green-100 text-sm font-bold">3:00 PM - 10:00 PM</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <i class="fas fa-phone text-yellow-300 mr-3 mt-1"></i>
+                            <div>
+                                <p class="font-semibold">Contact</p>
+                                <p class="text-green-100 text-sm">Coming soon...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="w-full mt-6 bg-yellow-400 hover:bg-yellow-300 text-gray-800 font-bold py-2 px-4 rounded-lg transition">
+                        <i class="fas fa-directions mr-2"></i>Get Directions
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 sm:py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl sm:text-5xl font-bold text-center mb-4 text-gray-800">Why Tadigo Taho?</h2>
+            <p class="text-center text-gray-600 mb-12 text-lg">Experience authentic Filipino flavors with a modern twist</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <div class="bg-gradient-to-br from-amber-50 to-green-50 rounded-xl p-8 border-l-4 border-green-500">
+                    <div class="text-4xl mb-4">🎯</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Quality & Freshness</h3>
+                    <p class="text-gray-700">We use the finest ingredients to create the most delicious taho in town. Fresh, quality, and affordable.</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-amber-50 to-green-50 rounded-xl p-8 border-l-4 border-green-500">
+                    <div class="text-4xl mb-4">❤️</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Made with Love</h3>
+                    <p class="text-gray-700">Every cup is prepared with care and passion. We take pride in serving our community.</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-amber-50 to-green-50 rounded-xl p-8 border-l-4 border-green-500">
+                    <div class="text-4xl mb-4">🌟</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Variety of Flavors</h3>
+                    <p class="text-gray-700">From classic to modern flavors, we have something for everyone. Try them all!</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-amber-50 to-green-50 rounded-xl p-8 border-l-4 border-green-500">
+                    <div class="text-4xl mb-4">🚀</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Quick Service</h3>
+                    <p class="text-gray-700">Fast, friendly service so you can enjoy your taho whenever you want it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-brown text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="font-bold text-lg mb-4 flex items-center">
+                        <i class="fas fa-leaf text-green-300 mr-2"></i> Tadigo Taho
+                    </h4>
+                    <p class="text-amber-100 text-sm">Authentic Filipino taho with a modern twist. Made fresh daily with love.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+                    <ul class="text-amber-100 text-sm space-y-2">
+                        <li><a href="#home" class="hover:text-white transition">Home</a></li>
+                        <li><a href="#menu" class="hover:text-white transition">Menu</a></li>
+                        <li><a href="#locations" class="hover:text-white transition">Locations</a></li>
+                        <li><a href="#about" class="hover:text-white transition">About Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-yellow-300 transition text-xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-yellow-300 transition text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-yellow-300 transition text-xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-amber-700 pt-8">
+                <p class="text-center text-amber-100 text-sm">
+                    &copy; 2024 Tadigo Taho. All rights reserved. | Made with <i class="fas fa-heart text-red-400"></i> for our community
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
